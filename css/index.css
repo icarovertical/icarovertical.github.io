@@ -201,3 +201,10 @@ i {
     width: 10px;
     height: auto;
 }
+
+/* ITEM VIDEO EN CATALOGO */
+
+.videoCatalogo {
+    height: auto;
+    width: 100%;
+}
