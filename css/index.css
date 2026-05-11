@@ -208,3 +208,8 @@ i {
     height: auto;
     width: 100%;
 }
+
+#videoContenido {
+    margin: 0 0 0 0;
+    padding: 20px;
+}
