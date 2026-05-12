@@ -232,8 +232,9 @@ i {
 #seccion2 {
     position: relative;
     display: flex;
+    margin-top: 30px;
     width: 100%;
-    height: 500px;
+    height: 600px;
     justify-content: center;
     }
 
@@ -244,13 +245,10 @@ i {
 .videoContenedor {
     position: absolute;
     display: flex;
-    gap: 27px;
     text-align: center;
     width: 1200px;
     height: 95%;
-    top: 5%;
 }
-
 
 .videoPrograma {
     width: auto;
