@@ -246,7 +246,7 @@ i {
     position: absolute;
     display: flex;
     text-align: center;
-    width: 1200px;
+    /*width: 1200px;*/
     height: 95%;
 }
 
