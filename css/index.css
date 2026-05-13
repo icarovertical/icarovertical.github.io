@@ -2,50 +2,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 /* estilos de elementos*/
 
+html {
+    scroll-behavior: smooth;
+    }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-}
-
+    }
 
 table {
     border-collapse: collapse; /* Bordes unidos */
     width: 500px;
     }
+
 table, th, td {
     border: 1px solid black; /* Borde de 1px sólido */
     }
+
 th, td {
     padding: 8px; /* Opcional: espacio interno */
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 10pt;
     }
+
 h1 {
     font-family: "Roboto", sans-serif;
     font-size: 24pt;
     font-weight: bold;
     color: red;
     }
+
 h2 {
     font-family: "Roboto", sans-serif;
     font-size: 18pt;
     font-weight: bold;
     color: red;
     }
+
 h3 {
     font-family: "Roboto", sans-serif;
     font-size: 14pt;
     font-weight: bold;
     color: blue;
     }
+
 p, li {
     font-family: "Roboto", sans-serif;
     font-size: 11pt;
     font-weight: thin;
     }
+
 i {
     font-family: "Roboto", sans-serif;
     font-size: 9pt;
@@ -123,6 +133,14 @@ i {
     font-weight: bold;
     color: rgb(255, 255, 255);
     padding: 10px;
+    }
+
+.btMenuPrincipal:hover {
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #35ffec;
     }
 
 /*  SECCION 1 */
@@ -298,7 +316,7 @@ i {
 .mes {
     font-size: 20px;
     font-weight: bold;
-    color: rgb(13, 9, 233);      
+    color: #35ffec;      
     margin-top : 10px;
 }
 
@@ -316,5 +334,5 @@ i {
 .linkEventos {
     font-family: "Roboto", sans-serif;
     font-size: 9pt;
-    color: blue;
+    color: #35ffec;
 }
