@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        String opcion = "";
+        String usuario = "";
+        String contrasena = "";
+        System.out.print("Ingrese una opcion: ");
+        opcion = sc.nextLine();        
+        switch (opcion) {
+            case "1":
+                System.out.println("Nosotros");
+                break;
+            case "2":
+                System.out.println("Cursos");
+                break;
+            case "3":
+                System.out.println("Eventos");
+                break;        
+            case "4":
+                System.out.println("Evaluacion");
+                System.out.print("Seleccione: 1- Login - 2 - Registro");
+                opcion = sc.nextLine(); 
+                switch (opcion) {
+                    case "1":
+                        System.out.println("Ingrese las credenciales");
+                        System.out.print("Ingrese el usuario");
+                        usuario = sc.nextLine();
+                        System.out.print("Ingrese la contraseña");
+                        contrasena = sc.nextLine();
+                        if(usuario.equals("admin") && contrasena.equals("1234")){
+                            System.out.println("Bienvenido al sistema...");
+                        } else {
+                            System.out.println("Error de credenciales..");
+                        }
+                        break;
+                    case "2":
+                        System.out.println("Ingrese los campos del registro");
+                        break;
+                    default:
+                        break;
+                }
+                break;        
+            default:
+                break;
+        }
+        sc.close();
+    }
+}
