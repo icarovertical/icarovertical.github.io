@@ -339,3 +339,20 @@ i {
     font-size: 9pt;
     color: #35ffec;
 }
+
+/* seccion sedes*/
+
+#sedes {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+    /*background-color: aqua;*/
+    }
+
+#tablaSedes {
+    width: 1000px;
+    height: 300px;
+    /*background-color: bisque;*/
+    }
