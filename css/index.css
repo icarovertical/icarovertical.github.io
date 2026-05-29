@@ -19,7 +19,7 @@ table {
     }
 
 table, th, td {
-    border: 1px solid black; /* Borde de 1px sólido */
+    /*border: 1px solid black; /* Borde de 1px sólido */
     }
 
 th, td {
@@ -50,11 +50,19 @@ h3 {
     color: blue;
     }
 
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 9pt;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    }
+
+
 p, li {
     font-family: "Roboto", sans-serif;
-    font-size: 11pt;
-    font-weight: thin;
+    font-size: 10pt;
     }
+
 
 i {
     font-family: "Roboto", sans-serif;
@@ -94,9 +102,7 @@ i {
 }
 
 #headerButton {
-    position: absolute; /* Clave: posiciona el botón respecto al fondoHeader
-    
-    /* Centrado absoluto */
+    position: absolute; /* Clave: posiciona el botón respecto al fondoHeader*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -269,7 +275,7 @@ i {
     position: absolute;
     display: flex;
     text-align: center;
-    /*width: 1200px;*/
+    width: 1200px;
     height: 95%;
 }
 
@@ -356,20 +362,25 @@ i {
     /*background-color: aqua;*/
     }
 
+caption {
+    padding: 0 0 10px 0;
+    text-align: left;
+}
+
 #tablaCabezote {
+    border-radius: 0 20px 0 0;
     background-color: #4400fd;
     font-family: "Roboto", sans-serif;
     font-size: 12pt;
     color: #ffffff;
-    border-radius: 15px;
 }
 
 #tablaSedes {
     width: 1000px;
     height: 300px;
-    border-radius: 15px;
     background-color: rgb(226, 226, 226);
     border-style: none;
+    border-radius: 15px;
 }
 
 #tablaBody {
@@ -380,3 +391,82 @@ i {
     color: #000000;
     /*background-color: bisque;*/
     }
+
+/* FOOTER*/
+
+footer {
+    display: flex;
+    padding: 50px 0 50px 0;
+    width: 100%;
+    height: 450px;
+    justify-content: center;
+    background-color: rgb(226, 226, 226);
+}
+
+.empresaFooter{
+    width: 30%;
+    padding: 20px;
+}
+
+.sedesFooter{
+    width: 30%;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 11pt;
+    color: #2f00ff;
+}
+
+.formularioFooter {
+    width: 30%;
+    padding: 5px 0 0 20px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 10pt;
+    color: #5c5c5c;
+    background-color: rgb(201, 201, 201);
+}
+
+.form-control {
+    width: 400px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    font-size: 12px;
+    }
+
+.form-label {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    color: rgb(82, 81, 81);
+    border: 1px solid #ccc;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+textarea {
+    width: 400px;
+    height: 50px;
+}
+
+.btn-primary{
+    width: 400px;
+    padding: 10px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+select{
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    font-size: 12px;
+}

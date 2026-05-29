@@ -157,45 +157,61 @@
 </table>
 </section>
 <!-- TERMINA SECCIÓN SEDES-->
-<footer id="footer">
-    <form action="recibe.php" method="get">
-        <br>
-        <label for="Nombre">Nombre:</label>
-        <input type="text" name="Nombre" id="Nombre">
-        <br>
-        <label for="Identificacion1">Identificación;:</label>
-        <input type="number" name="Identificacion1" id="Identificacion1">
-        <br>
-        <label for="Email">Email:</label>
-        <input type="email">
-        <br>
-        <label for="Pass">Contraseña:</label>
-        <input type="password">
-        <br>
-        <label for="Masculino1">Genero</label>
-        Masculino
-        <input type="radio" name="Genero" id="Masculino1">
-        Femenino
-        <input type="radio" name="Genero" id="Femenino1">
-        Otro
-        <input type="radio" name="Genero" id="otro1">
-        <br><br>
-        <label>Qué opina de los camaleones?</label>
-        <br>
-        <textarea name="" id="" rows="" cols=""></textarea>
-        <br><br>
-        <label for="paisReside">Pais</label>
-        <select name="paisReside" id="paisReside">
-        <option value="">--Seleccione--</option>
-        <option value="">Colombia</option>
-        <option value="">Perú</option>
-        <option value="">Bolivia</option>
-        <option value="">Cuba</option>
-        </select>
-        <br><br>
-        <input type="submit" value="GUARDAR">
-    </form>
-    <p>Desarrollado por www.2cats.com / Diego Sanabria Peñaloza / Héctor Alexis Noreña Osorio </p>
+<footer>
+    <div class="empresaFooter">
+        <h4>Better Sounds - school<br><br>
+            Nit: 894.906.959-7.<br><br>
+            Sujeta a inspección y vigilancia por el Ministerio de Educación Nacional.<br>
+            Renovación de la Acreditación Institucional en Alta Calidad Multicampus. Resolución 020198 del 31 de octubre de 2024 por un periodo de 8 años.<br>
+            Otorgado por el Ministerio de Educación Nacional.<br><br>
+            Desarrollado por www.2cats.com<br>
+            Diego Sanabria Peñaloza / Héctor Alexis Noreña Osorio<br><br>
+            © Todos los derechos reservados, 2026.
+        </h4>
+    </div>
+    <div class="sedesFooter">
+        <h4>
+            Medellín<br><br>
+            Campus Centro: Carrera 52 #45 87<br>
+            +57 604 78 98 63<br>
+            313 603 56 30<br>
+            asesoria.integral@bettersounds.edu.co<br><br>
+            Campus Poblado: Carrera 48 #36 48<br>
+            +57 604 78 98 63<br>
+            313 603 56 30<br>
+            asesoria.integral@bettersounds.edu.co
+        </h4>
+    </div>
+    <div class="formularioFooter">
+        <form action="recibe.php" method="get">
+            <h3>Contacto</h3><br>
+            <!-- <label for="Nombre" class="form-label"></label> -->
+            <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Nombre completo">
+            <!-- <label for="Identificacion1" class="form-label">Identificación:</label> -->
+            <input type="text" class="form-control" name="Identificacion1" id="Identificacion1" placeholder="Identificación">
+            <!-- <label for="Email" class="form-label">Email:</label> -->
+            <input type="email" class="form-control" placeholder="Email">
+            <br>
+            <label for="SedeInteres">Sede de interes:</label>
+            Bogotá
+            <input type="radio" name="sede" id="Bogota">
+            Medellín
+            <input type="radio" name="sede" id="Medellin">
+            <br><br>
+            <!-- <label placeholder="Comentario"></label> -->
+            <textarea name="" id="" rows="" cols="" placeholder="Comentario"></textarea>
+            <br><br>
+            <label for="paisReside">Programa de interes</label>
+            <select name="paisReside" id="paisReside">
+            <option value="">Seleccione</option>
+            <option value="">Dj produccer</option>
+            <option value="">Sonido en vivo</option>
+            <option value="">Audio para podcast</option>
+            </select>
+            <br>
+            <button type="submit" class="btn btn-primary" value="GUARDAR">GUARDAR</button>
+        </form>
+    </div>
 </footer>
 <!-- TERMINA FOOTER -->
 </body>
