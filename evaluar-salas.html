@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BetterSounds | University System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleDash.css">
+</head>
+<body>
+
+    <div class="contenedorPrincipal">
+        <div class="sidebar">
+            <div class="areaLogo">
+                <img src="logo2.png" alt="Logo" class="logoPequeno">
+            </div>
+         
+            <div class="menu">
+                <a href="dashboard.html" class="botonMenu" style="display:block; text-decoration:none;">🏠 Dashboard</a>
+                <p class="etiqueta">ACADEMIA</p>
+                <a href="evaluar-maestro.html" class="botonMenu" style="display:block; text-decoration:none;">🎻 Evaluar Maestro</a>
+                <a href="evaluar-teoria.html" class="botonMenu" style="display:block; text-decoration:none;">🎼 Teoría Musical</a>
+                <a href="evaluar-salas.html" class="botonMenu activo" style="display:block; text-decoration:none;">🎹 Infraestructura</a>
+                
+                <p class="etiqueta">DATOS</p>
+                <a href="reportes.html" class="botonMenu" style="display:block; text-decoration:none;">📊 Ver Gráficos</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div id="vistaDashboard">
+                <h1>Hola, Juan Camilo</h1>
+                <div class="tarjetasFlex">
+                    <div class="tarjeta">
+                        <h3>Progreso Total</h3>
+                        <h2>22%</h2>
+                        <div class="barraGris">
+                            <div class="barraColor" style="width: 22%;"></div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Estado Académico</h3>
+                        <p>En progreso. Llevas 2 de 9 evaluaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalVentana" class="fondoModal" style="display: flex;">
+        <form action="dashboard.html" method="GET" class="cajaModal">
+            <a href="dashboard.html" class="botonCerrar" style="text-decoration: none;">&times;</a>
+            <h2>Evaluar Salas</h2>
+            <p>Selecciona qué vas a evaluar:</p>
+            <select required>
+                <option value="">-- Seleccionar Espacio --</option>
+                <option>Sala Pianos</option>
+                <option>Auditorio A</option>
+                <option>Cabina Grabación</option>
+            </select>
+
+            <div class="preguntaBloque">
+                <p>1. Acústica e insonorización del espacio</p>
+                <div style="display:flex; justify-content:space-between;">
+                    <label><input type="radio" name="s1" value="1" required> 1</label>
+                    <label><input type="radio" name="s1" value="2"> 2</label>
+                    <label><input type="radio" name="s1" value="3"> 3</label>
+                    <label><input type="radio" name="s1" value="4"> 4</label>
+                    <label><input type="radio" name="s1" value="5"> 5</label>
+                </div>
+            </div>
+
+            <div class="preguntaBloque">
+                <p>2. Afinación y estado de instrumentos</p>
+                <div style="display:flex; justify-content:space-between;">
+                    <label><input type="radio" name="s2" value="1" required> 1</label>
+                    <label><input type="radio" name="s2" value="2"> 2</label>
+                    <label><input type="radio" name="s2" value="3"> 3</label>
+                    <label><input type="radio" name="s2" value="4"> 4</label>
+                    <label><input type="radio" name="s2" value="5"> 5</label>
+                </div>
+            </div>
+
+            <div class="preguntaBloque">
+                <p>3. Limpieza y orden del aula</p>
+                <div style="display:flex; justify-content:space-between;">
+                    <label><input type="radio" name="s3" value="1" required> 1</label>
+                    <label><input type="radio" name="s3" value="2"> 2</label>
+                    <label><input type="radio" name="s3" value="3"> 3</label>
+                    <label><input type="radio" name="s3" value="4"> 4</label>
+                    <label><input type="radio" name="s3" value="5"> 5</label>
+                </div>
+            </div>
+
+            <div class="preguntaBloque">
+                <p>4. Disponibilidad de horarios para reserva</p>
+                <div style="display:flex; justify-content:space-between;">
+                    <label><input type="radio" name="s4" value="1" required> 1</label>
+                    <label><input type="radio" name="s4" value="2"> 2</label>
+                    <label><input type="radio" name="s4" value="3"> 3</label>
+                    <label><input type="radio" name="s4" value="4"> 4</label>
+                    <label><input type="radio" name="s4" value="5"> 5</label>
+                </div>
+            </div>
+
+            <div class="preguntaBloque">
+                <p>5. Climatización, ventilación e iluminación</p>
+                <div style="display:flex; justify-content:space-between;">
+                    <label><input type="radio" name="s5" value="1" required> 1</label>
+                    <label><input type="radio" name="s5" value="2"> 2</label>
+                    <label><input type="radio" name="s5" value="3"> 3</label>
+                    <label><input type="radio" name="s5" value="4"> 4</label>
+                    <label><input type="radio" name="s5" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="preguntaBloque" style="border-bottom: none;">
+                <p>6. Observaciones adicionales (Opcional)</p>
+                <textarea name="comentarios" placeholder="Escribe aquí tus comentarios, sugerencias o felicitaciones..." style="width: 100%; padding: 12px; background-color: #1a1a1a; color: #ffffff; border: 1px solid #4400fd; border-radius: 15px; font-family: 'Roboto', sans-serif; box-sizing: border-box; min-height: 90px; resize: vertical; margin-bottom: 20px;"></textarea>
+            </div>    
+            <button type="submit" class="botonEnviar">Enviar Evaluación</button>
+        </form>
+    </div>
+
+</body>
+</html>

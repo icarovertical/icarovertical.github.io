@@ -1,0 +1,221 @@
+/* --- IMPORTACIÓN DE LA FUENTE ROBOTO --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* --- ESTILOS GENERALES --- */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #1a1a1a; 
+    color: #CECECE; 
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.contenedorPrincipal {
+    display: flex;
+    height: 100vh;
+}
+
+/* --- BARRA LATERAL --- */
+.sidebar {
+    width: 260px;
+    background-color: #111111;
+    border-right: 2px solid #4400fd;
+    padding: 20px;
+}
+
+.areaLogo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logoPequeno {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.etiqueta {
+    color: #CECECE;
+    opacity: 0.6;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 25px 0 10px 10px;
+    letter-spacing: 1px;
+}
+
+.botonMenu {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: #CECECE;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.botonMenu:hover {
+    background-color: #2a2a2a;
+    color: #35ffec; 
+}
+
+/* AQUÍ ESTABA EL DETALLE: Forzamos el nuevo azul eléctrico */
+.botonMenu.activo {
+    background-color: #4400fd !important; 
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* --- CONTENIDO Y TARJETAS --- */
+.contenido {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.tarjetasFlex {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: #2a2a2a; 
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #333333;
+    flex: 1;
+}
+
+/* --- BARRAS DE PROGRESO --- */
+.barraGris {
+    width: 100%;
+    background-color: #1a1a1a;
+    height: 14px;
+    border-radius: 15px;
+    margin-top: 15px;
+    overflow: hidden;
+    border: 1px solid #333333;
+}
+
+.barraColor {
+    height: 100%;
+    background-color: #35ffec !important; 
+    border-radius: 15px;
+    transition: width 0.5s ease;
+}
+
+/* --- VENTANA EMERGENTE (MODAL) --- */
+.fondoModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cajaModal {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 15px; 
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid #4400fd; 
+    position: relative;
+}
+
+.botonCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #CECECE;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.preguntaBloque {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 15px;
+}
+
+/* --- FORMULARIOS --- */
+select {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #4400fd;
+    border-radius: 15px; 
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.botonEnviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #4400fd; 
+    color: #ffffff;
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.botonEnviar:hover {
+    background-color: #35ffec;
+    color: #1a1a1a;
+}
+
+label {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/*DISEÑO RESPONSIVO CON FLEXBOX */
+@media (max-width: 768px) {
+    
+    /* 1. Cambiamos la dirección de fila a columna para que el menú quede arriba del contenido */
+    .contenedorPrincipal {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    /* 2. La barra lateral ahora ocupa todo el ancho de la pantalla del celular */
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #4400fd;
+        box-sizing: border-box; /* Evita que el padding dañe el ancho */
+    }
+
+    /* 3. Cambiamos la dirección de las tarjetas para que se apilen una debajo de otra */
+    .tarjetasFlex {
+        flex-direction: column;
+    }
+
+    /* 4. Hacemos que la caja del formulario emergente se encoja para caber en el celular */
+    .cajaModal {
+        width: 90%;
+        max-height: 90vh;
+    }
+}
