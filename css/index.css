@@ -449,6 +449,8 @@ footer {
 textarea {
     width: 400px;
     height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .btn-primary{
