@@ -61,6 +61,23 @@ body {
     cursor: pointer;
 }
 
+.botonEnlace {
+  background-color: #007bff;
+  width: 50%;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12x;
+}
+
+.btIngreso{
+    text-align: center;
+}
+
 /* Links */
 
 .links {
