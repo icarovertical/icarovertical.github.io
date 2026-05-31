@@ -1,0 +1,126 @@
+import java.util.Scanner;
+
+        public class App {
+        public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        String opcion = "";
+        String usuario = "";
+        String contrasena = "";
+
+        // Variable para controlar que el programa no se cierre
+        boolean salirPrincipal = false;
+
+        do {
+        System.out.println("\n=== BETTER SOUNDS | SISTEMA PRINCIPAL ===");
+        System.out.println("1. Nosotros");
+        System.out.println("2. Cursos");
+        System.out.println("3. Eventos");
+        System.out.println("4. Módulo de Evaluación (Login)");
+        System.out.println("5. Salir del sistema");
+        System.out.print("Ingrese una opcion: ");
+        opcion = sc.nextLine();
+
+        switch (opcion) {
+        case "1":
+        System.out.println("\n[Info] Somos la academia musical BetterSounds...");
+        break;
+        case "2":
+        System.out.println("\n[Info] Nuestros cursos: Armonía, Desarrollo Web, Lógica...");
+        break;
+        case "3":
+        System.out.println("\n[Info] Próximos eventos en el auditorio...");
+        break;
+        case "4":
+        System.out.println("\n--- INICIO DE SESIÓN ---");
+        System.out.print("Ingrese el usuario: ");
+        usuario = sc.nextLine();
+        System.out.print("Ingrese la contraseña: ");
+        contrasena = sc.nextLine();
+
+        // =======================================================
+        // ROL 1: ESTUDIANTE (REQUISITO FUNCIONAL 1)
+        // =======================================================
+        if(usuario.equals("estudiante") && contrasena.equals("1234")) {
+        boolean salirEstudiante = false;
+        do {
+        System.out.println("\n=== PANEL DE ESTUDIANTE ===");
+        System.out.println("Hola, Juan Camilo. ¿Qué deseas evaluar?");
+        System.out.println("1. Evaluar Maestro");
+        System.out.println("2. Evaluar Teoría Musical");
+        System.out.println("3. Evaluar Infraestructura (Salas)");
+        System.out.println("4. Cerrar Sesión");
+        System.out.print("Seleccione una opción: ");
+        String opcEstudiante = sc.nextLine();
+
+        switch (opcEstudiante) {
+        case "1":
+        System.out.println("\n> Evaluando Maestro... [Simulación Guardada con éxito]");
+        break;
+        case "2":
+        System.out.println("\n> Evaluando Teoría... [Simulación Guardada con éxito]");
+        break;
+        case "3":
+        System.out.println("\n> Evaluando Salas... [Simulación Guardada con éxito]");
+        break;
+        case "4":
+        System.out.println("\nCerrando sesión de estudiante...");
+        salirEstudiante = true;
+        break;
+        default:
+        System.out.println("\nOpción inválida.");
+        break;
+        }
+        } while (!salirEstudiante);
+
+        // =======================================================
+        // ROL 2: DOCENTE (REQUISITO FUNCIONAL 4 - HU PROFE JAIME)
+        // =======================================================
+        } else if(usuario.equals("jaime.zapata") && contrasena.equals("1234")) {
+        boolean salirDocente = false;
+        do {
+        System.out.println("\n=== PANEL DOCENTE: PROFE. JAIME ZAPATA ===");
+        System.out.println("1. Ver resultados de Desarrollo Web I (DES-101)");
+        System.out.println("2. Ver resultados de Lógica de Programación (LOG-102)");
+        System.out.println("3. Exportar informe a PDF");
+        System.out.println("4. Cerrar Sesión");
+        System.out.print("Seleccione una opción: ");
+        String opcDocente = sc.nextLine();
+
+        switch (opcDocente) {
+        case "1":
+        System.out.println("\n> Resultados DES-101: Claridad 4.9/5.0 | Metodología 4.5/5.0");
+        System.out.println("> Comentario Anónimo: 'El profe Jaime explica súper bien...'");
+        break;
+        case "2":
+        System.out.println("\n> Resultados LOG-102: No hay resultados disponibles para el periodo.");
+        break;
+        case "3":
+        System.out.println("\n> [Error Simulado] Conexión inestable. Falló la descarga del PDF.");
+        break;
+        case "4":
+        System.out.println("\nCerrando sesión de docente...");
+        salirDocente = true;
+        break;
+        default:
+        System.out.println("\nOpción inválida.");
+        break;
+        }
+        } while (!salirDocente);
+
+        } else {
+        System.out.println("\n[!] Error de credenciales. Intente nuevamente.");
+        }
+        break;
+        case "5":
+        System.out.println("\nSaliendo del sistema... ¡Hasta luego!");
+        salirPrincipal = true;
+        break;
+        default:
+        System.out.println("\n[!] Opción inválida. Intente nuevamente.");
+        break;
+        }
+        } while (!salirPrincipal); // El ciclo se repite mientras salirPrincipal sea falso
+
+        sc.close();
+        }
+        }
