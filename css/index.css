@@ -414,13 +414,13 @@ footer {
 }
 
 .formularioFooter {
-    width: 30%;
+    width: 450px;
     padding: 5px 0 0 20px;
     border-radius: 10px;
     font-family: "Roboto", sans-serif;
     font-size: 10pt;
     color: #5c5c5c;
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(184, 184, 184);
 }
 
 .form-control {
@@ -461,7 +461,7 @@ textarea {
     cursor: pointer;
 }
 
-select{
+select {
     padding: 5px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
